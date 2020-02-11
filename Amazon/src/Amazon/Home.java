@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 
 public class Home extends JPanel {
 	public Home() {
+		add(Buttons.AmazonLogo());
 		add(Buttons.TodaysDeals());
 		add(Buttons.BestSellers());
 		add(Buttons.FindaGift());

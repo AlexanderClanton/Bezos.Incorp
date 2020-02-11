@@ -1,10 +1,26 @@
 package Amazon;
 
 import java.awt.Component;
+import java.awt.Image;
 
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 public class Buttons {
+	/**
+	 * @wbp.parser.entryPoint
+	 */
+	public static Component AmazonLogo() {
+		JButton Logo = new JButton();
+		ImageIcon icon = new ImageIcon(Buttons.class.getResource("/Amazon/logo.png"));
+		Image image = icon.getImage();
+		Image smallicon = image.getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH);
+		icon = new ImageIcon(smallicon);
+		Logo.setIcon(icon);
+		return Logo;
+	}
+	
 	public static Component TodaysDeals() {
 		JButton TodaysDeals = new JButton("Today's Deals");
 		TodaysDeals.setOpaque(true);
