@@ -19,6 +19,11 @@ public class VideoGameGUI extends JFrame{
 		setBounds(800, 800, 800, 800);
 		getContentPane().setLayout(null);
 		
+		JButton Logo = new JButton("");        
+        Logo.setIcon(new ImageIcon(HomePageGUI.class.getResource("/GUI/st,small,215x235-pad,210x230,f8f8f8.u1.jpg")));
+        Logo.setBounds(6, 6, 206, 103);
+        getContentPane().add(Logo);
+		
 		JButton FE7 = new JButton("");        
 		FE7.setBackground(new Color(238, 238, 238));
 		FE7.setIcon(new ImageIcon(VideoGameGUI.class.getResource("/GUI/220px-GBA_Fire_Emblem_Box.jpg")));
