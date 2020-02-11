@@ -1,5 +1,10 @@
 package AmazonProd;
 
-public class Consumer {
+public class Consumer 
+{
+
+
+
+
 
 }
