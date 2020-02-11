@@ -1,16 +1,24 @@
 package Amazon;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JPanel;
 
 public class Buttons {
 	/**
 	 * @wbp.parser.entryPoint
 	 */
+	JPanel panel;
+	Buttons(JPanel panel) {
+		panel = this.panel;
+	}
 	public static Component AmazonLogo() {
 		JButton Logo = new JButton();
 		ImageIcon icon = new ImageIcon(Buttons.class.getResource("/Amazon/logo.png"));
@@ -18,6 +26,13 @@ public class Buttons {
 		Image smallicon = image.getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH);
 		icon = new ImageIcon(smallicon);
 		Logo.setIcon(icon);
+		Logo.addActionListener(new ActionListener()
+		{
+			  public void actionPerformed(ActionEvent e)
+			  {
+				  
+			  }
+		});
 		return Logo;
 	}
 	
@@ -34,6 +49,8 @@ public class Buttons {
 				TodaysDeals.setBorderPainted(false);
 			}
 		});
+		TodaysDeals.setBackground(new Color(51, 51, 153));
+		TodaysDeals.setForeground(Color.white);
 		return TodaysDeals;
 	}
 	
@@ -50,6 +67,8 @@ public class Buttons {
 				FindaGift.setBorderPainted(false);
 			}
 		});
+		FindaGift.setBackground(new Color(51, 51, 153));
+		FindaGift.setForeground(Color.white);
 		return FindaGift;
 	}
 	
@@ -66,6 +85,8 @@ public class Buttons {
 				CustomerService.setBorderPainted(false);
 			}
 		});
+		CustomerService.setBackground(new Color(51, 51, 153));
+		CustomerService.setForeground(Color.white);
 		return CustomerService;
 	}
 	
@@ -82,6 +103,8 @@ public class Buttons {
 				Registry.setBorderPainted(false);
 			}
 		});
+		Registry.setBackground(new Color(51, 51, 153));
+		Registry.setForeground(Color.white);
 		return Registry;
 	}
 	
@@ -98,6 +121,8 @@ public class Buttons {
 				NewReleases.setBorderPainted(false);
 			}
 		});
+		NewReleases.setBackground(new Color(51, 51, 153));
+		NewReleases.setForeground(Color.white);
 		return NewReleases;
 	}
 	
@@ -114,6 +139,8 @@ public class Buttons {
 				Books.setBorderPainted(false);
 			}
 		});
+		Books.setBackground(new Color(51, 51, 153));
+		Books.setForeground(Color.white);
 		return Books;
 	}
 
@@ -130,6 +157,8 @@ public class Buttons {
 				BestSellers.setBorderPainted(false);
 			}
 		});
+		BestSellers.setBackground(new Color(51, 51, 153));
+		BestSellers.setForeground(Color.white);
 		return BestSellers;
 	}
 }
