@@ -1,5 +1,6 @@
 package AmazonProd;
 
-public class Sport {
+public class Sport 
+{
 
 }

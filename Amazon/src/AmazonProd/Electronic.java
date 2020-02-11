@@ -1,5 +1,10 @@
 package AmazonProd;
 
-public class Electronic {
+public class Electronic 
+
+{
+
+
+
 
 }
