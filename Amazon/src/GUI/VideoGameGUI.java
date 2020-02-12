@@ -20,14 +20,26 @@ public class VideoGameGUI extends JFrame{
 		getContentPane().setLayout(null);
 		
 		JButton Logo = new JButton("");        
-        Logo.setIcon(new ImageIcon(HomePageGUI.class.getResource("/GUI/st,small,215x235-pad,210x230,f8f8f8.u1.jpg")));
-        Logo.setBounds(6, 6, 206, 103);
-        getContentPane().add(Logo);
+		Logo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				HomePageGUI frame= new HomePageGUI();
+        		frame.setVisible(true);
+			}
+		});
+	    Logo.setIcon(new ImageIcon(HomePageGUI.class.getResource("/GUI/st,small,215x235-pad,210x230,f8f8f8.u1.jpg")));
+	    Logo.setBounds(6, 6, 206, 103);
+	    getContentPane().add(Logo);
 		
 		JButton FE7 = new JButton("");        
+		FE7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FireEmblem7GUI frame= new FireEmblem7GUI();
+        		frame.setVisible(true);
+			}
+		});
 		FE7.setBackground(new Color(238, 238, 238));
 		FE7.setIcon(new ImageIcon(VideoGameGUI.class.getResource("/GUI/220px-GBA_Fire_Emblem_Box.jpg")));
-		FE7.setBounds(16, 6, 236, 244);
+		FE7.setBounds(6, 121, 236, 244);
         getContentPane().add(FE7);
 	}
 
