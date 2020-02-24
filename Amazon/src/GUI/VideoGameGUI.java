@@ -2,57 +2,66 @@ package GUI;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import javax.swing.ImageIcon;
+import java.awt.*;  
+import javax.swing.*;  
+import java.awt.event.*;
+import javax.swing.*;
+import java.awt.Dimension;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-import java.awt.*;  
-import javax.swing.*;  
+public class VideoGameGUI {
+    
+    private final JButton FE7 = new JButton("");
+    private final JButton GBVS = new JButton("");
+    private final JButton Logo = new JButton("");
+    
+    JFrame VGFrame= new JFrame();
 
-
-public class VideoGameGUI extends JFrame{
-
-	public VideoGameGUI() {
-		getContentPane().setBackground(new Color(175, 238, 238));
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(800, 800, 800, 800);
-		getContentPane().setLayout(null);
-		
-		JButton Logo = new JButton("");        
-		Logo.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				HomePageGUI frame= new HomePageGUI();
-        		frame.setVisible(true);
-			}
-		});
-	    Logo.setIcon(new ImageIcon(HomePageGUI.class.getResource("/GUI/st,small,215x235-pad,210x230,f8f8f8.u1.jpg")));
-	    Logo.setBounds(6, 6, 206, 103);
-	    getContentPane().add(Logo);
-		
-		JButton FE7 = new JButton("");        
-		FE7.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				FireEmblem7GUI frame= new FireEmblem7GUI();
-        		frame.setVisible(true);
-			}
-		});
-		FE7.setBackground(new Color(238, 238, 238));
-		FE7.setIcon(new ImageIcon(VideoGameGUI.class.getResource("/GUI/220px-GBA_Fire_Emblem_Box.jpg")));
-		FE7.setBounds(6, 121, 236, 244);
-        getContentPane().add(FE7);
+    public VideoGameGUI() {
+        VGFrame.getContentPane().setBackground(new Color(175, 238, 238));
+        VGFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        VGFrame.setBounds(800, 800, 800, 800);
+        VGFrame.getContentPane().setLayout(null);
         
-        JButton GBVS = new JButton("");        
+        Logo.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                VGFrame.dispose();
+                HomePageGUI show= new HomePageGUI();
+                show.HomeFrame.setVisible(true);
+            }
+        });
+        
+        Logo.setIcon(new ImageIcon(HomePageGUI.class.getResource("st,small,215x235-pad,210x230,f8f8f8.u1.jpg")));
+        Logo.setBounds(6, 6, 206, 103);
+        VGFrame.getContentPane().add(Logo);
+        
+        FE7.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                VGFrame.dispose();
+                FireEmblem7GUI show= new FireEmblem7GUI();
+                show.FE7Frame.setVisible(true);
+            }
+        });
+        
+        FE7.setBackground(new Color(238, 238, 238));
+        FE7.setIcon(new ImageIcon(VideoGameGUI.class.getResource("220px-GBA_Fire_Emblem_Box.jpg")));
+        FE7.setBounds(6, 121, 236, 244);
+        VGFrame.getContentPane().add(FE7);
+        
         GBVS.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				GBVSGUI frame= new GBVSGUI();
-        		frame.setVisible(true);
-			}
-		});
+            public void actionPerformed(ActionEvent e) {
+                VGFrame.dispose();
+                GBVSGUI show= new GBVSGUI();
+                show.GBVSFrame.setVisible(true);
+            }
+        });
+        
         GBVS.setBackground(new Color(238, 238, 238));
-        GBVS.setIcon(new ImageIcon(VideoGameGUI.class.getResource("/GUI/Screen Shot 2020-02-12 at 12.28.10 PM.png")));
+        GBVS.setIcon(new ImageIcon(VideoGameGUI.class.getResource("Screen Shot 2020-02-12 at 12.28.10 PM.png")));
         GBVS.setBounds(254, 121, 236, 244);
-        getContentPane().add(GBVS);
-	}
+        VGFrame.getContentPane().add(GBVS);
+    }
 
 }
+
